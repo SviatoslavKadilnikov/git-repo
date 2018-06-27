@@ -1,0 +1,35 @@
+<script>
+	var year = 1001;
+	var days = (7 * 30) + 24;
+	for(var i = 1; i <= year; i++) {
+		if(i % 5 == 0) { 
+			if(i % 100 == 0) {
+				if(i % 500 == 0) { 
+					days = days + 360 + 1;
+				} else {
+					days = days + 360;
+				}
+			} else {
+				days = days + 360 + 1;
+			} 
+		} else {
+			days = days + 360;
+		}
+	}
+	var whatDay = days % 7;
+	if(whatDay == 0) {
+		alert("First day is Tuesday.");
+	} else if(whatDay == 1) {
+		alert("First day is Wednesday.");
+	} else if(whatDay == 2) {
+		alert("First day is Thursday.");
+	} else if(whatDay == 3) {
+		alert("First day is Friday.");
+	} else if(whatDay == 4) {
+		alert("First day is Saturday.");
+	} else if(whatDay == 5) {
+		alert("First day is Sunday.");
+	} else if(whatDay == 6) {
+		alert("First day is Monday.");
+	}
+</script>

@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script>
+	var sum = prompt("How much money?");
+	var proc = prompt("What percentege?");
+	var time = prompt("How long(month)?");
+	var n;
+
+	for(n = 1; n <= time; n++) {
+		sum = sum * (1 + ((proc / 100)/12));
+		alert("Money after " + n + " months: " + sum);
+	}
+</script>
